@@ -1,34 +1,33 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-value=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Microsoft Activation Scripts (MAS)</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css">
+    <style>
+        html, body {
+            height: 100%; /* 设置整个页面高度为 100% */
+        }
+        .full-height {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
 </head>
-
-  <title>Microsoft Activation Scripts (MAS)</title>
-  <script>
-    function copyToClipboard() {
-      const urlText = document.querySelector('p a').textContent;
-      navigator.clipboard.writeText(urlText);
-    }
-  </script>
-</head>
-
 
 <body>
-    <div class="container is-fluid">
-        <div class="card">
-            <div class="card-content">
-                <div class="content">
-                    <h1 class="title has-text-centered mt-3">Microsoft Activation Scripts (MAS)</h1>
-                    <p class="has-text-centered">Powershell代码： irm https://get.activated.win | iex</p>
-                </div>
-                <div class="has-text-centered mt-3">
-                    <button class="button is-primary" onclick="copyToClipboard()">点击复制代码</button>
+    <div class="container full-height">
+        <div class="panel panel-info">
+            <div class="panel-body">
+                <h1 class="text-center">Microsoft Activation Scripts (MAS)</h1>
+                <p class="text-center">
+                    Powershell代码（<a href="https://wwm.lanzn.com/imNmz24m3s5a">需卸载SEP）</a>irm https://get.activated.win | iex
+                </p>
+                <div class="text-center">
+                    <button class="btn btn-primary" onclick="copyToClipboard()">点击复制代码</button>
                 </div>
             </div>
         </div>
@@ -37,10 +36,10 @@
         function copyToClipboard() {
             const textToCopy = "irm https://get.activated.win | iex";
             navigator.clipboard.writeText(textToCopy)
-              .then(() => {
+                .then(() => {
                     alert("已成功复制到剪贴板");
                 })
-              .catch((err) => {
+                .catch((err) => {
                     console.error('复制失败: ', err);
                     alert("复制失败，请手动复制");
                 });
